@@ -1,0 +1,86 @@
+/* =========================
+   必要素材カード
+========================= */
+
+.material-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding: 12px;
+  margin-bottom: 14px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+/* 上段情報 */
+.material-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 8px;
+
+  line-height: 1.6;
+}
+
+/* 入力欄エリア */
+.owned-area {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* 入力欄 */
+.owned-input {
+  width: 90px;
+
+  padding: 6px 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+/* 残り */
+.material-remaining {
+  font-weight: bold;
+}
+
+/* 残り0 */
+.remaining-complete {
+  color: #00c853;
+}
+
+/* 残り少 */
+.remaining-warning {
+  color: #ff9800;
+}
+
+/* 不足 */
+.remaining-danger {
+  color: #ff5252;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+
+  .material-item {
+    padding: 10px;
+  }
+
+  .material-info {
+    gap: 6px;
+  }
+
+  .owned-input {
+    width: 70px;
+  }
+
+}

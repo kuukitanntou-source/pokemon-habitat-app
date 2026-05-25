@@ -1,0 +1,167 @@
+.habitat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+  margin-bottom: 10px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+.habitat-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.habitat-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.material-list {
+  text-align: right;
+  line-height: 1.6;
+}
+
+.material-item {
+  font-size: 14px;
+  color: #555;
+}
+
+.col-check {
+  text-align: center;
+  width: 80px;
+}
+
+.col-name {
+  text-align: left;
+  width: 240px;
+}
+
+.col-materials {
+  text-align: left;
+}
+
+.material-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.material-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #f3f3f3;
+}
+
+@media (max-width: 768px) {
+
+  .habitat-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .material-list {
+    text-align: left;
+    width: 100%;
+  }
+
+  .col-materials {
+  min-width: 140px;
+}
+
+.material-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.material-tag {
+  white-space: nowrap;
+}
+
+.habitat-table,
+.habitat-table tbody,
+.habitat-table tr,
+.habitat-table td {
+  display: block;
+  width: 100%;
+}
+
+/* ヘッダー非表示 */
+.habitat-table thead {
+  display: none;
+}
+
+/* カード内部 */
+.habitat-row {
+  padding: 12px;
+}
+
+/* 各列 */
+.habitat-row td {
+  border: none;
+  padding: 6px 0;
+}
+
+/* 素材タグ */
+.material-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* タグ */
+.material-tag {
+  white-space: nowrap;
+}
+
+}
+
+/* 生息地1件ごとのカード */
+.habitat-row {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fff;
+
+  margin-bottom: 14px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+  overflow: hidden;
+}
+
+/* 行hover */
+.habitat-row:hover {
+  background: #fafafa;
+}
+
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+
+  border: 2px solid #bbb;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  transition: all 0.2s;
+}
+
+/* チェック済み */
+.custom-checkbox.checked {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
