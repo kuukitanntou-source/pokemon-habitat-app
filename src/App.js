@@ -31,7 +31,7 @@ function App() {
   // ============================================================
 
   /** 全生息地データ（サーバーから取得） */
-  const [habitats, setHabitats] = useState(HABITATS);
+  const [habitats] = useState(HABITATS);
 
   /** 作成済み生息地IDのセット。例: { "habitat_1", "habitat_5", ... } */
   const [completedIds, setCompletedIds] = useState(() => {
@@ -63,10 +63,10 @@ function App() {
   const [showOnlyIncomplete, setShowOnlyIncomplete] = useState(false);
 
   /** データ読み込み中かどうか */
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
 
   /** エラーメッセージ（読み込み失敗時） */
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
 
   // ============================================================
   // useEffect - 副作用の処理
