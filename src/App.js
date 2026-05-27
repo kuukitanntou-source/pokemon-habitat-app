@@ -50,6 +50,7 @@ function App() {
 
   /** 検索テキスト */
   const [searchText, setSearchText] = useState("");
+  const [activeTab, setActiveTab] = useState("habitats");
   const [ownedMaterials, setOwnedMaterials] = useState(() => {
   try {
     const saved = localStorage.getItem("ownedMaterials");
@@ -203,9 +204,28 @@ function App() {
         onReset={handleReset}
       />
 
+<div className="tab-buttons">
+
+  <button
+    className={activeTab === "habitats" ? "active-tab" : ""}
+    onClick={() => setActiveTab("habitats")}
+  >
+    生息地
+  </button>
+
+  <button
+    className={activeTab === "materials" ? "active-tab" : ""}
+    onClick={() => setActiveTab("materials")}
+  >
+    必要素材
+  </button>
+
+</div>
+
       {/* メインコンテンツ（左右レイアウト） */}
-      <div className="main-layout">
-        {/* 左側：生息地一覧 */}
+    <div className="main-layout">
+
+      {activeTab === "habitats" && (
         <div className="left-panel">
           <HabitatList
             habitats={filteredHabitats}
@@ -219,8 +239,9 @@ function App() {
             onFilterChange={setShowOnlyIncomplete}
           />
         </div>
+      )}
 
-        {/* 右側：必要素材合計パネル（固定表示） */}
+      {activeTab === "materials" && (
         <div className="right-panel">
           <MaterialPanel
             materials={requiredMaterials}
@@ -229,7 +250,9 @@ function App() {
             setOwnedMaterials={setOwnedMaterials}
           />
         </div>
-      </div>
+     )}
+
+    </div>
     </div>
   );
 }
